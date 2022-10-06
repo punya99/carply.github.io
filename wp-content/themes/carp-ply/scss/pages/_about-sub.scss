@@ -1,0 +1,592 @@
+.about-sub-banner{
+    display: inline-block;
+    width: 100%;
+    background: $color-red;
+    padding-top: 170px;
+    @include for-tablet-1024{
+        padding-top: 130px;
+    }
+    @include for-phone-only{
+        padding-top: 100px;
+    }
+
+
+    .video-sec-h{
+        position: relative;
+        z-index: 2;
+        width: 80%;
+        float: right;
+
+        @include for-big-desktop-up{
+            width: 95%;
+        }
+
+        @include for-tablet-1024{
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        h2, h1{
+            font-size: $font-80;
+            color: $color-white;
+            font-weight: $font-w-700;
+            position: relative;
+            z-index: 1;
+            line-height: 80px;
+            padding-left: 5px;
+            @include position(absolute, $left:0, $top:50%);
+            transform: translateY(-50%);
+
+            @include for-big-desktop-up{
+                font-size: 60px;
+                line-height: 73px;
+                br{
+
+                }
+            }
+
+
+
+            @include for-tablet-1024{
+                font-size: 40px;
+                line-height: 50px;
+                transform: none;
+                position: inherit;
+                top: 25px;
+                br{
+                    display: none;
+                }
+            }
+
+            span{
+                color: $color-red;
+                display: block;
+                position: relative;
+
+            }
+        }
+
+        .video-image{
+            position: relative;
+            float: right;
+            top: 50px;
+            width: 65%;
+
+            video{
+                width: 100%;
+            }
+
+            @include for-tablet-1024{
+                top: 40px;
+                width: 100%;
+            }
+
+            // &::before{
+            //     content: "";
+            //     width: 100%;
+            //     height: 100%;
+            //     @include position(absolute, $left:0, $top:0);
+            //     background: rgb(0,0,0);
+            //     background: linear-gradient(50deg, rgba(0,0,0,0.4234068627450981) 0%, rgba(0,212,255,0) 100%);
+            // }
+            img{
+                max-width: 100%;
+                height: 600px;
+                object-fit: cover;
+
+                @include for-phone-only{
+                    height: 100%;
+                }
+
+            }
+            .video-play{
+                @include position(absolute, $left:50%, $top:50%);
+                transform: translate(-50%, -50%);
+                width: 112px;
+                height: 112px;
+                background-color: $color-white;
+                border-radius: 50%;
+                z-index: 1;
+                img{
+                    width: 20px;
+                    @include position(absolute, $left:50%, $top:50%);
+                transform: translate(-50%, -50%);
+                height: auto;
+                }
+                @include for-phone-only{
+                    width: 76px;
+                    height: 76px;
+                    img{
+                        width: 12px;
+                        @include position(absolute, $left:53%, $top:50%);
+                    }
+                }
+
+                &:hover{
+                    background-color: $color-red-light;
+                    img{
+                        filter: brightness(0.2) sepia(1) saturate(10000%);
+                    }
+                }
+
+            }
+        }
+
+
+    }
+}
+
+
+.about-description{
+    text-align: center;
+    background: $color-light-gray2;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    display: inline-block;
+    width: 100%;
+
+    @include for-tablet-1024{
+        padding-top: 90px;
+    }
+    h3{
+        font-size: 24px;
+        color: $color-gray;
+        font-weight: $font-w-400;
+        max-width: 1000px;
+        display: table;
+        margin: auto;
+        line-height: 36px;
+
+        span{
+            font-weight: $font-w-600;
+            color: $color-red;
+            font-size: $font-40;
+        }
+
+        @include for-phone-only{
+            font-size: $font-18;
+            line-height: 28px;
+            span{
+                font-size: $font-30;
+            }
+        }
+    }
+
+    .icons-set{
+        margin-top: 60px;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            @include for-phone-only{
+                display: flex;
+            }
+
+            li{
+                display: inline-block;
+                margin: auto; text-align: center;
+                padding: 0 50px;
+
+                @include for-phone-only{
+                    padding: 0 0px;
+                }
+
+                @include landscape{
+                    padding: 0 30px;
+                }
+
+                .icon{
+                    background: #FFF7E2;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
+                    padding-top: 0px;
+                    margin: 0 auto 15px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    img{
+
+                        object-fit: contain;
+                    }
+                    @include for-phone-only{
+                        width: 100px;
+                        height: 100px;
+
+                        img{
+                            width: 65px;
+                            object-fit: contain;
+                        }
+                    }
+                }
+
+                span{
+                    font-size: $font-14;
+                    font-weight: $font-w-600;
+
+                }
+            }
+        }
+    }
+}
+
+
+.product-display{
+     padding: 100px 0 150px;
+
+     @include for-tablet-900{
+         padding: 70px 0 70px;
+     }
+
+     @include for-phone-only{
+        padding: 70px 0 55px;
+    }
+     p {
+         font-size: $font-20;
+         font-weight: $font-w-500;
+         margin-top: 25px;
+         margin-bottom: 0;
+         padding: 0;
+         @include for-big-desktop-up{
+             font-size: $font-18;
+             line-height: 26px;
+         }
+         @include for-phone-only{
+            font-size: $font-18;
+         }
+     }
+
+     .fat-img-sec{
+        &:nth-child(odd){
+            margin-bottom: 130px;
+            @include for-tablet-900{
+                margin-bottom: 70px;
+            }
+            .pos1{
+                order: 1;
+                @include for-tablet-900{
+                    margin-bottom: 70px;
+                }
+                @include for-phone-only{
+                    margin-bottom: 40px;
+                }
+
+                .image-sec{
+
+                    .big-img{
+                        float: right;
+                        @include for-phone-only{
+                            width: 85%;
+                        }
+                        img{
+                            height: 444px;
+                            object-fit: contain;
+                            width: 100%;
+                            @include for-phone-only{
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    .small-img{
+                        @include position(absolute, $left:0, $bottom:-50px);
+                        @include for-phone-only{
+                            left: auto;
+                            bottom: -25px;
+                        }
+                        img{
+                            height: 257px;
+                            object-fit: contain;
+                            @include for-phone-only{
+                                height: 122px;
+                            }
+                        }
+                    }
+                }
+            }
+            .pos2{
+                order: 2;
+                padding-right: 100px;
+                @include for-tablet-1024{
+                    padding-right: 15px;
+                }
+            }
+        }
+
+
+        &:nth-child(even){
+            .pos1{
+                order: 2;
+                @include for-tablet-900{
+                    margin-bottom: 70px;
+                }
+                @include for-phone-only{
+                    margin-bottom: 40px;
+                }
+
+                .image-sec{
+
+                    .big-img{
+                        float: left;
+                        @include for-phone-only{
+                            width: 85%;
+                        }
+                        img{
+                            height: 444px;
+                            object-fit: contain;
+                            width: 100%;
+                            @include for-phone-only{
+                                height: auto;
+                            }
+                        }
+                    }
+
+                    .small-img{
+                        @include position(absolute, $right:0, $bottom:-50px);
+                        @include for-phone-only{
+                            right: 15px;
+                            bottom: -25px;
+                        }
+                        img{
+                            height: 257px;
+                            object-fit: contain;
+                            @include for-phone-only{
+                                height: 122px;
+                            }
+                        }
+                    }
+                }
+            }
+            .pos2{
+                order: 1;
+                padding-left: 100px;
+
+                @include for-tablet-1024{
+                    order: 2;
+                    padding-left: 15px;
+                }
+            }
+        }
+
+
+
+}
+
+}
+
+.our-products-list{
+    padding: 75px 0 70px;
+    border-top: 1px solid $color-light-gray2;
+
+    @include for-phone-only{
+        padding-top: 50px;
+    }
+
+    h2{
+        font-size: $font-40;
+        font-weight: $font-w-700;
+        color: $color-gray;
+        margin-bottom: 30px;
+
+        @include for-phone-only{
+            font-size: $font-30;
+        }
+    }
+
+    @include for-tablet-900{
+        padding-bottom: 20px;
+        padding-left: 40px;
+
+        .container{
+          max-width: 100%;
+          padding-left: 0px;
+          padding-right: 0;
+
+          .row{ margin-right: 0; margin-left: 0;}
+
+      }
+    }
+
+    @include for-phone-only{
+        padding-bottom: 20px;
+        padding-left: 20px;
+
+        .container{
+          max-width: 100%;
+          padding-left: 0px !important;
+          padding-right: 0 !important;
+
+          .row{ margin-right: 0; margin-left: 0;}
+
+      }
+    }
+
+        .p-blocks{
+            margin: 0;
+            padding: 0 0 0px;
+            @include for-tablet-1024-min{
+              .owl-carousel{
+                  display: flex;
+                  width: auto;
+              }
+            }
+
+            @include for-tablet-1024{
+
+              .owl-stage{
+                  padding-left: 0 !important;
+              }
+
+            }
+
+
+
+            .blocks{
+                    border-radius: 6px;
+              margin: 0 0 0px;
+              padding: 0;
+              position: relative;
+              overflow: hidden;
+
+                  &:before{
+                      content: "";
+                      height: 100%;
+                      width: 100%;
+                      background: $color-black;
+                      background: rgb(0,0,0);
+                        background: linear-gradient(49deg, rgba(0,0,0,0.7315301120448179) 0%, rgba(0,212,255,0) 100%);
+                      @include position(absolute, $left:0, $top:0);
+                      display: block !important;
+                  }
+                  &:hover{
+
+                      .content-text{
+                          transition: all 0.5s;
+                          @include position(absolute, $bottom:0px, $left:0) ;
+                        h3{
+                            transition: all 0.5s;
+                        }
+                          p{
+                              opacity: 1;
+                              transition: all 0.5s;
+                              height: auto;
+
+                          }
+
+                      }
+                  }
+              .content-text{
+                  @include position(absolute, $bottom:0px, $left:0) ;
+                  padding: 30px 30px 10px;
+                  width: 100%;
+                  transition: all 0.5s;
+
+                  h3{
+                      margin-bottom: 10px;
+                      font-size: $font-20;
+                      color: $color-white;
+                      font-weight: $font-w-700;
+                      text-transform: uppercase;
+                      transition: all 0.5s;
+                  }
+                  p{
+                      transition: all 0.5s;
+                      line-height: 16px;
+                      font-size: $font-14;
+                      color: $color-white;
+                      line-height: 20px;
+                      opacity: 0;
+                      height: 0;
+                      transition: height 0.15s ease-out;
+
+                      @include for-phone-only{
+                          opacity: 1;
+                          height: auto;
+                      }
+
+
+                  }
+
+                  @include for-tablet-1024{
+                      @include position(absolute, $bottom:0px, $left:0) ;
+                  }
+              }
+              img{
+                  height: 365px;
+                  object-fit: cover;
+              }
+
+
+            }
+
+
+          }
+
+          .owl-theme{
+            .owl-nav{
+              .disabled{
+                cursor: not-allowed;
+                display: none;
+              }
+              .owl-next, .owl-prev{
+                 width: 50px;
+                 height: 50px;
+                 background-color: $color-red;
+                 border-radius: 50%;
+                 position: absolute;
+                 top: 50%;
+                 transform: translate(-50%, -50%);
+                 span{
+                   display: none;
+                 }
+                 &:before{
+                   // position: absolute;
+                   top: 0;
+                   left: 0;
+                 }
+                 &:after{
+                   content: "";
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%, -50%);
+                   width: 12px;
+                   height: 12px;
+                   background-image: url("../images/sprite.png");
+                   border-radius: 50%;
+                 }
+                 &:hover{
+                   background: $color-gray;
+                   box-shadow: 0 10px 20px rgba(152, 1, 45, 0.16);
+                 }
+               }
+               .owl-next{
+                 right: 0px;
+                 &:after{
+                   background-position:-44px -6px;
+                 }
+                 @include for-phone-only{
+                   right: -20px;
+                   width: 40px;
+                   height: 40px;
+                   top: 50%;
+                 }
+               }
+               .owl-prev{
+                 transform: translate(-50%, -50%) rotate(180deg);
+                 left: -9px;
+                 &:after{
+                   background-position:-44px -6px;
+                 }
+                 @include for-phone-only{
+                   left: 25px;
+                   width: 40px;
+                   height: 40px;
+                   top:50%;
+                 }
+               }
+            }
+          }
+
+}

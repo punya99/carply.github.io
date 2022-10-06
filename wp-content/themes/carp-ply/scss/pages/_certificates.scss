@@ -1,0 +1,242 @@
+.certificates{
+  padding: 35px 0 110px; 
+  display: inline-block;
+  width:100%;
+  background: $color-black;
+
+  @include for-desktop-up{
+    padding: 35px 40px 70px; 
+
+  }
+  
+
+ .certificates-slider{
+     margin-top: 50px;
+
+   
+        .owl-nav{
+        margin-top: 10px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top:46%;
+    width: 57%;
+    position: absolute;
+    height: 0px;
+    @include for-big-desktop-up{
+        width: 59%;  
+    }
+
+    @include for-tablet-1024{
+        top: 44%;
+    }
+
+    @include for-tablet-900{
+        width: 100%;
+        top: 47%;
+    }
+
+    @include landscape{
+        width: 90%;
+    }
+
+    @include for-phone-only{
+        top: 42%;
+    }
+
+
+          .disabled{
+            cursor: not-allowed;
+            display: none;
+          }
+          .owl-next, .owl-prev{
+             width: 50px;
+             height: 50px;
+             background-color: $color-red;
+             border-radius: 50%;
+             position: relative;
+             margin: 0;
+           
+             
+             span{
+               display: none;
+             }
+             &:before{
+               // position: absolute;
+               top: 0;
+               left: 0;
+             }
+             &:after{
+               content: "";
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               width: 12px;
+               height: 12px;
+               background-image: url("../images/sprite.png");
+               border-radius: 50%;
+             }
+             &:hover{
+               background: $color-gray;
+               box-shadow: 0 10px 20px rgba(152, 1, 45, 0.16);
+             }
+           }
+           .owl-next{
+            float: right;
+             &:after{
+               background-position:-44px -6px;
+             }
+             @include for-phone-only{
+               right: -24px;
+               width: 40px;
+               height: 40px;
+               top: 50%;
+             }
+           }
+           .owl-prev{
+             transform: rotate(180deg);
+             float: left;
+             &:after{
+               background-position:-44px -6px;
+             }
+             @include for-phone-only{
+               left: -24px;
+               width: 40px;
+               height: 40px;
+               top:50%;
+             }
+           }
+        }
+      
+
+
+ .certificates-list{
+    position: relative; 
+    a{
+        &:hover{
+            h3{
+                -webkit-text-stroke-color: $color-red;
+            color: $color-red !important;
+            transition: all 0.5s;
+            }  
+        }
+    }
+    .image{
+    &::before{
+         content: "";
+         width: 100%;
+         height: 100%;
+         background: rgba(0, 0, 0, 0.671);
+         @include position(absolute, $left:0, $top:0);
+     }
+    } 
+  .certi-text{
+      text-align: center;
+      @include position(absolute, $left:50%, $top:50%);
+      transform: translate(-50%, -50%);
+      width: 100%;
+
+      h3{
+        width: 100%;
+        color: transparent !important;
+       
+        font-size: $font-80;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: $color-white;
+        position: relative;
+        transition: all 0.5s;
+
+        &:hover{
+            -webkit-text-stroke-color: $color-red;
+            color: $color-red !important;
+            transition: all 0.5s;
+        }
+        
+        @include for-big-desktop-up{
+            font-size: $font-60;
+        }
+
+        @include for-desktop-up{
+            font-size: $font-40;
+        
+        }
+
+        
+  
+      }
+
+
+  }
+
+  
+ }
+
+}
+
+.breadcrumb-wrap .container {
+    border-bottom: 1px solid #333333;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+  
+}
+
+#certifications{
+  .modal-content{
+    text-align: center;
+    border: 0 !important;
+    background: transparent !important;
+
+    .close{
+      padding: 0;
+      opacity: 1;
+      right: 70px;
+
+      @include for-tablet-900{
+        padding: 0;
+    opacity: 1;
+    right: 0;
+    top: -40px;
+      }
+      span{
+        padding: 0;
+        color: $color-white;
+
+        &:hover{
+          color: $color-red-light;
+        }
+      }
+    }
+
+.certification-modal-body.modal-body{
+  padding: 0;
+    .certification-image{
+     
+      color: $color-white;
+      font-weight: $font-w-500;
+      text-transform: uppercase;
+      img{
+        width: 100%;
+      }
+     h3{
+      margin-top: 20px;
+      font-size: $font-20;
+     }
+     
+    }
+  }
+  
+}
+}
+
+.certification-loader{
+  width: 25px;
+  transform: translate(-50%, -50%);
+  @include position(absolute, $left:50%, $top:50%);
+  
+}
+
+
+

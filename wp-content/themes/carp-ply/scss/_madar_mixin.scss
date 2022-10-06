@@ -1,0 +1,80 @@
+
+@mixin for-phone-only-360 {
+  @media (max-width: 360px) { @content; }
+}
+@mixin for-phone-only-575 {
+  @media (max-width: 575px) { @content; }
+}
+@mixin for-phone-only {
+  @media (max-width: 767px) { @content; }
+}
+@mixin for-tablet-900 {
+  @media (max-width: 900px) { @content; }
+}
+@mixin for-tablet-1024 {
+  @media (max-width: 1024px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (max-width: 1250px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (max-width: 1450px) { @content; }
+}
+@mixin for-medium-desktop-up-min {
+  @media (min-width: 1451px) and (max-width: 1600px){ @content; }
+}
+
+@mixin for-1900-desktop-up-min {
+  @media (min-width: 1900px) { @content; }
+}
+@mixin for-1450-desktop-up-min {
+  @media (min-width: 1450px) { @content; }
+}
+@mixin for-big-desktop-up-min {
+  @media (min-width: 1350px) { @content; }
+}
+
+@mixin for-tablet-1024-min {
+  @media (min-width: 1024px) { @content; }
+}
+
+@mixin landscape {
+  @media screen and (min-width: 320px) and (max-width: 900px) and (orientation: landscape) { @content; }
+}
+@mixin landscape-small {
+  @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) { @content; }
+}
+
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+  }
+@mixin fullwith{
+  display: $display-inline;
+  width: 100%;
+}
+@mixin center-pos {
+  @include position(absolute, $left:50%, $top:50%);
+            transform: translate(-50%, -50%);
+
+}
+
+@mixin uppper {
+  text-transform: uppercase;
+}
+
+@mixin sprite {
+  background-image: url("../images/sprite.png");
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}

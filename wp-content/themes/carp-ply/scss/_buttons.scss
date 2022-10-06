@@ -1,0 +1,132 @@
+.logo-button{
+    font-size: $font-14;
+    color: $color-red;
+    font-weight: $font-w-700;
+    position: relative;
+    padding-left: 75px;
+    padding-top: 15px;
+    display: inline-block;
+    &::before{
+        content: "";
+        @include position(absolute, $left:0, $top:0);
+        width: 59px;
+        height: 59px;
+        @include sprite;
+        background-position:-151px -110px;
+        background-color: $color-red;
+        border-radius: 50%;
+    }
+    &:hover{
+        color: $color-red-light;
+        transition: all 0.5s;
+        @include for-tablet-900 {
+          color: $color-red;
+        }
+        &::before{
+            background-color: $color-red-light;
+            transition: all 0.5s;
+            @include for-tablet-900 {
+              background-color: $color-red;
+            }
+        }
+    }
+}
+
+.round-button{
+    font-size: $font-14;
+    color: $color-red;
+    font-weight: $font-w-700;
+    position: relative;
+    padding-left: 0px;
+    padding-top: 10px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    &::before{
+        content: "";
+        @include position(absolute, $left:0, $top:0);
+        width: 50px;
+        height: 50px;
+        background-color: $color-red;
+        border-radius: 50%;
+        box-shadow: 0 10px 20px rgba(152, 1, 45, 0.16);
+    }
+    &::after{
+        content: "";
+        @include position(absolute, $left:50%, $top:50%);
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        @include sprite;
+        background-position:-27px -6px;
+        border-radius: 50%;
+    }
+    &:hover{
+
+        transition: all 0.5s;
+
+    }
+}
+
+.button{
+    background:#d58e50;
+    border-radius: 6px;
+    font-weight: $font-w-500;
+    font-size: $font-18;
+    color: $color-white;
+    padding: 30px 40px;
+    text-transform: uppercase;
+    border: 0;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    margin-top: 11px;
+    @include for-big-desktop-up{
+        padding: 20px 10px;
+
+    }
+    @include for-tablet-900{
+        padding: 20px 10px;
+    }
+    &:hover{
+        background: $color-red-light;
+        color: $color-red;
+    }
+}
+
+
+
+.getaquote-button{
+    background:$color-red;
+    border-radius:50px;
+    font-weight: $font-w-700;
+    font-size: $font-14;
+    color: $color-white;
+    padding: 20px 60px 20px 80px;
+    border: 0;
+    display: inline-block;
+    text-align: center;
+    margin-top: 11px;
+    position: relative;
+
+    &:hover{
+        &::before{
+            background-position:-348px -87px;
+        }
+    }
+
+    &::before{
+        width: 16px;
+        height: 16px;
+        content: "";
+        @include position(absolute, $left:55px, $top:18);
+        @include sprite;
+        background-position:-331px -87px;
+    }
+
+
+    &:hover{
+        background: $color-red-light;
+        color: $color-red;
+    }
+}
